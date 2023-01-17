@@ -1,6 +1,6 @@
 This is a set of RSS feeds from NOAA's National Hurricane Center with notices about tropical storms in the Atlantic and Pacific. These include map data and storm forecasts ("outlooks").
 
-https://www.nhc.noaa.gov/aboutrss.shtml and https://www.nhc.noaa.gov/aboutrssupdates.shtml
+https://www.nhc.noaa.gov/aboutrss.shtml and archived data that can be used for testing https://www.nhc.noaa.gov/aboutrssupdates.shtml
 
 # Docs
 
