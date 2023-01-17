@@ -6,24 +6,22 @@ http://youtube.com
 Original source of this process https://danielmiessler.com/blog/rss-feed-youtube-channel/
 
 ## Steps
-1. Find the channel ID. To find the channel IDs search the channel page source for an `rssUrl` json key in one of the script tag texts (at least right now Jan 2023).
+1. Find the RSS URL. To find the URL search the channel page source for an `rssUrl` json key in one of the script tag texts (at least right now Jan 2023).
     ```sh
     $ wget -q "https://www.youtube.com/c/Level1Techs" -O - | grep rssUrl | sed 's/.*rssUrl":"\([^"]\+\)".*/\1/'
     https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ
     ```
-1. Append the ID to `https://www.youtube.com/feeds/videos.xml?channel_id=`
-1. Request the feed with the new URL.
+1. Request the feed with the URL.
 
 # Examples
 ## Get Level1Techs RSS
 Get https://www.youtube.com/@Level1Techs as an RSS feed.
 
-1. Get the channel ID
+1. Get the channel RSS URL
     ```sh
     $ wget -q "https://www.youtube.com/c/Level1Techs" -O - | grep rssUrl | sed 's/.*rssUrl":"\([^"]\+\)".*/\1/'
     https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ
     ```
-1. Stick the channel ID on the feed URL `https://www.youtube.com/feeds/videos.xml?channel_id=UC4w1YQAJMWOz4qtxinq55LQ`
 1. Request the feed (see below)
 
 ### Request
